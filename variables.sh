@@ -39,7 +39,7 @@ echo $PHONE
 
 #Unix / Linux - Special Variables
 
-
+echo $HOME
 echo "The filename of the current script", $0
 echo $n
 echo "The number of arguments supplied to a script", $#
