@@ -11,16 +11,23 @@ echo "$CHOICE"
 
 pycharm_dir="pycharm*"
 webstorm_dir="WebStorm*"
+pycharm_url="https://data.services.jetbrains.com/products/download?code=PCP&platform=linuxAnaconda&_ga=2.141656369.246534920.1581577435-133917865.1578895696"
+file_name="pycharm-anaconda.tar.gz"
+
 
 # Download package
 if [ "$CHOICE" == 1 ]; then
   echo "Downloading PyCharm..."
-  wget "https://www.jetbrains.com/pycharm/download/download-thanks.html"
+  wget -O $file_name $pycharm_url
   echo "Download finished"
   sleep 2s
   echo "Installing Pycharm"
-  tar -xvzf $pycharm_dir -C /opt/
-  rm $pycharm_dir
+  rm -rf /opt/$pycharm_dir
+  rm -rf ~/.java/.userPrefs/jetbrains/pycharm
+  rm -rf ~/PycharmProjects
+  tar -xvzf $file_name -C /opt/
+  rm $file_name
+  rm ~/Desktop/Pycharm.sh
   sleep 2s
   echo "Adding shortcut to desktop"
   touch PyCharm.sh
