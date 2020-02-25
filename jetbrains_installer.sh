@@ -24,9 +24,8 @@ if [ "$CHOICE" == 1 ]; then
   echo "Download finished"
   sleep 2s
   echo "Installing Pycharm"
-  sudo rm -rf /opt/$pycharm_dir
-  sudo rm -rf ~/.java/.userPrefs/jetbrains/pycharm
-  sudo rm -rf ~/PycharmProjects
+  sudo rm -rf /opt/$pycharm_dir && rm -rf ~/.java/.userPrefs/jetbrains/pycharm
+  sudo rm -rf ~/PycharmProjects && rm -rf ~/.PyCharm*
   sudo tar -xvzf $pycharm_file_name -C /opt/
 #  rm $pycharm_file_name
   sudo rm ~/Desktop/Pycharm.sh
@@ -42,11 +41,11 @@ else
   echo "Download finished"
   sleep 2s
   echo "Installing Webstorm"
-  sudo rm -rf /opt/$webstorm_dir
-  sudo rm -rf ~/.java/.userPrefs/jetbrains/webstorm
+  sudo rm -rf /opt/$webstorm_dir && rm -rf ~/.java/.userPrefs/jetbrains/webstorm
+  sudo rm -rf ~/.WebStorm*
   sudo tar -xvzf $webstorm_file_name -C /opt/
 #  rm $webstorm_file_name
-  sudo rm ~/Desktop/Pycharm.sh
+  sudo rm ~/Desktop/WebStorm.sh
   sleep 2s
   echo "Adding shortcut to desktop"
   touch ~/Desktop/WebStorm.sh
