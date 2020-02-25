@@ -24,16 +24,19 @@ if [ "$CHOICE" == 1 ]; then
   echo "Download finished"
   sleep 2s
   echo "Installing Pycharm"
-  sudo rm -rf /opt/$pycharm_dir && rm -rf ~/.java/.userPrefs/jetbrains/pycharm
-  sudo rm -rf ~/PycharmProjects && rm -rf ~/.PyCharm*
+  sudo rm -rf /opt/$pycharm_dir
+  sudo rm -rf ~/.java/.userPrefs/jetbrains/pycharm
+  sudo rm -rf ~/PycharmProjects
+  sudo rm -rf ~/.PyCharm*
   sudo tar -xvzf $pycharm_file_name -C /opt/
 #  rm $pycharm_file_name
   sudo rm ~/Desktop/Pycharm.sh
   sleep 2s
   echo "Adding shortcut to desktop"
-  touch ~/Desktop/Pycharm.sh
-  echo '#!/bin/bash\nLOC=/opt/pycharm*/bin/\ncd $LOC\n./pycharm.sh' > ~/Desktop/PyCharm.sh
+  touch ~/Desktop/PyCharm.sh
+  echo -e '#!/bin/bash \nLOC=/opt/pycharm*/bin/ \ncd $LOC \n./pycharm.sh \n' > ~/Desktop/PyCharm.sh
   sudo chmod 777 ~/Desktop/PyCharm.sh
+  echo "Pycharm installed successfully"
 else
   sleep 2s
   echo "Downloading Webstorm..."
@@ -49,7 +52,8 @@ else
   sleep 2s
   echo "Adding shortcut to desktop"
   touch ~/Desktop/WebStorm.sh
-  echo '#!/bin/bash\nLOC=/opt/webstorm*/bin/\ncd $LOC\n./pycharm.sh' > ~/Desktop/WebStorm.sh
+  echo '#!/bin/bash \nLOC=/opt/webstorm*/bin/ \ncd $LOC \n./WebStorm.sh\n' > ~/Desktop/WebStorm.sh
   sudo chmod 777 ~/Desktop/WebStorm.sh
+  echo "WebStorm installed successfully"
 fi
 
