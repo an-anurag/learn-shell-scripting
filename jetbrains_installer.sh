@@ -17,16 +17,18 @@ webstorm_url="https://download.jetbrains.com/webstorm/WebStorm-2019.3.3.tar.gz?_
 pycharm_file_name="pycharm-anaconda.tar.gz"
 webstorm_file_name="webstorm.tar.gz"
 
+# TODO: finish function
 function install_ide() {
   url=$1
   file_name=$2
   dir_name=$3
+  ide_name=$4
 
   echo "Downloading %s" %file_name
   wget -O $file_name $url
   echo "Download finished"
   sleep 2s
-  echo "Installing %s" %file_name
+  echo "Installing %s" %ide_name
   sudo rm -rf /opt/$dir_name
   sudo rm -rf ~/.java/.userPrefs/jetbrains/$dir_name
   sudo rm -rf ~/PycharmProjects
