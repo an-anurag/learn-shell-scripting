@@ -12,7 +12,7 @@ echo "$CHOICE"
 
 pycharm_dir="pycharm*"
 webstorm_dir="WebStorm*"
-pycharm_url="https://data.services.jetbrains.com/products/download?code=PCP&platform=linuxAnaconda&_ga=2.141656369.246534920.1581577435-133917865.1578895696"
+pycharm_url="https://download.jetbrains.com/python/pycharm-professional-2020.1.tar.gz"
 webstorm_url="https://download.jetbrains.com/webstorm/WebStorm-2019.3.3.tar.gz?_ga=2.88742043.1611910552.1582538215-133917865.1578895696"
 pycharm_file_name="pycharm-anaconda.tar.gz"
 webstorm_file_name="webstorm.tar.gz"
